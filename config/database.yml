@@ -1,12 +1,16 @@
 development:
-  adapter: postgresql
-  encoding: unicode
-  database: d5f8ei0984rarg
-  hostname: ec2-54-197-241-78.compute-1.amazonaws.com
+  #adapter: postgresql
+  #encoding: unicode
+  #database: d5f8ei0984rarg
+  #hostname: ec2-54-197-241-78.compute-1.amazonaws.com
+  #pool: 5
+  #username: txrsxumtnotjxq
+  #password: _u66lrFwdWli6eei6-y8Lg_Mel
+  #port: 5432
+  adapter: sqlite3
+  database: db/test.sqlite3
   pool: 5
-  username: txrsxumtnotjxq
-  password: _u66lrFwdWli6eei6-y8Lg_Mel
-  port: 5432
+  timeout: 5000
 test:
   adapter: sqlite3
   database: db/test.sqlite3

@@ -1,0 +1,12 @@
+body {
+	font-family: Arial, Helvetica, sans-serif;
+	letter-spacing: 1px;
+}
+
+a {
+	text-decoration: none;
+	display: block;
+	&:hover {
+		text-decoration: none !important;
+	}
+}
