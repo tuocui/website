@@ -21,20 +21,31 @@
 			}
 		}
 		#main-nav {
-			padding: 0;
+			padding: 0 0 0 2px;
 			float: left;
 			position: relative;
 			height: 65px;
 			background: #2e537b;
 			display: block;
 			border-bottom: solid 1px #143f6b;
-			@include box-shadow(-1px 0px 2px #143f6b);
+			overflow: hidden;
+			&:before {
+				position: absolute;
+				content: ' ';
+				background-color: transparent;
+				@include box-shadow(0 0px 3px #143f6b);
+				top: 0; 
+			    right: 0; 
+			    bottom: 0;
+			    left: 2px; 
+			}
 			#nav-title {
 				color: #70b6ff;
 				padding: 23px 85% 20px 15%;
 				font-size: 15px;
 				text-transform: uppercase;
 				line-height: 65px;
+				cursor: default;
 				i {
 					margin-right: 5px;
 				}

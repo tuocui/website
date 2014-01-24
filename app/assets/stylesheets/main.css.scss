@@ -1,6 +1,7 @@
 body {
 	font-family: Arial, Helvetica, sans-serif;
 	letter-spacing: 1px;
+    height: 100%;
 }
 
 a {
@@ -9,4 +10,13 @@ a {
 	&:hover {
 		text-decoration: none !important;
 	}
+}
+
+#main-container {
+	margin-top: 68px;
+	min-height: 100%;
+}
+
+html { 
+    height:100%;
 }
