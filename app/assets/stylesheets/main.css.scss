@@ -13,8 +13,11 @@ a {
 }
 
 #main-container {
-	margin-top: 68px;
+	padding-top: 65px;
 	min-height: 100%;
+	#content-container {
+		left: 16.666666666666%;
+	}
 }
 
 html { 

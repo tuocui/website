@@ -11,7 +11,9 @@
 <%= render "layouts/header" %>
 <div id="main-container">
 	<%= render "layouts/sidebar" %>
-	<%= yield %>
+	<div id="content-container" class="col-md-10">
+		<%= yield %>
+	</div>
 </section>
 <%= render "layouts/footer" %>
 

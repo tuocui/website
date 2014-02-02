@@ -1,12 +1,42 @@
 #sidebar-container {
-	padding: 0;
+	padding: 65px 0 0 0;
+	bottom: 0;
+	top: 0;
+	position: fixed;
 	min-height: 100%;
 	.options {
 		list-style: none;
 		min-height: 100%;
 		background: #70b6ff;
+		padding: 0;
 		.option {
-			height: 50px;
+			height: 65px;
+			text-transform: uppercase;
+			border-top: 1px solid #7bbeff;
+			border-bottom: 1px solid #489bf4;
+			&:hover {
+				border-top: 1px solid #489bf4;
+			}
+			a {
+				color: #fff;
+				height: 100%;
+				width: 100%;
+				padding: 22px 0 0 15%;
+				&:hover {
+					color: #fff;
+					background: #4e9ff7;
+				}
+				i {
+					color: #0876e1;
+					margin-right: 6%;
+				}
+			}
+			&.active {
+				border-top: 1px solid #4e9ff7;
+				a {
+					background: #4e9ff7;
+				}
+			}
 		}
 	}
 }

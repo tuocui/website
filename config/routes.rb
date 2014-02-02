@@ -2,6 +2,12 @@ Website::Application.routes.draw do
 
   root :to => "blog#index"
 
+
+  controller :blog do
+    get '/about' => :about
+    get '/thoughts(/:id)' => :thoughts
+    get '/contact' => :contact
+  end
   # The priority is based upon order of creation:
   # first created -> highest priority.
 
