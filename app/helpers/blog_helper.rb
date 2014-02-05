@@ -9,15 +9,19 @@ module BlogHelper
 			when "welcome"
 				@welcome_active = "active"
 				@header_icon = "plane"
+				@title = "Tony Cui"
 			when "about"
 				@about_active = "active"
 				@header_icon = "user"
+				@title = "About - Tony Cui"
 			when "thoughts"
 				@thoughts_active = "active"
 				@header_icon = "comment"
+				@title = "Thoughts - Tony Cui"
 			when "contact"
 				@contact_active = "active"
 				@header_icon = "phone"
+				@title = "Contact - Tony Cui"
 		end
 		@header_text = page
 	end
