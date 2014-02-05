@@ -7,6 +7,7 @@ development:
   username: txrsxumtnotjxq
   password: _u66lrFwdWli6eei6-y8Lg_Mel
   port: 5432
+  host: localhost
   #adapter: sqlite3
   #database: db/test.sqlite3
   #pool: 5
