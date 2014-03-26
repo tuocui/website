@@ -4,8 +4,8 @@ Website::Application.routes.draw do
 
 
   controller :blog do
-    get '/about' => :about
-    get '/thoughts(/:id)' => :thoughts
+    get '/thoughts' => :thoughts
+    get '/thoughts/:id' => :thought
     get '/contact' => :contact
   end
   # The priority is based upon order of creation:

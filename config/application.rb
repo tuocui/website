@@ -61,5 +61,7 @@ module Website
 
     # Set asset precompile
     config.assets.initialize_on_precompile = false
+
+    config.assets.paths << "#{Rails.root}/app/vendor/fonts"
   end
 end

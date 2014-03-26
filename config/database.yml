@@ -1,11 +1,11 @@
 development:
   adapter: postgresql
   encoding: unicode
-  database: d5f8ei0984rarg
-  hostname: ec2-54-197-241-78.compute-1.amazonaws.com
+  database: ddu8b7bhkk835m
+  hostname: ec2-54-197-241-64.compute-1.amazonaws.com
   pool: 5
-  username: txrsxumtnotjxq
-  password: _u66lrFwdWli6eei6-y8Lg_Mel
+  username: dnvtkayjqbvxkj
+  password: cUS72o9wtwoCWro9nui8Vshxw5
   port: 5432
   #adapter: sqlite3
   #database: db/test.sqlite3
@@ -14,18 +14,18 @@ development:
 test:
   adapter: postgresql
   encoding: unicode
-  database: d5f8ei0984rarg
-  hostname: ec2-54-197-241-78.compute-1.amazonaws.com
+  database: ddu8b7bhkk835m
+  hostname: ec2-54-197-241-64.compute-1.amazonaws.com
   pool: 5
-  username: txrsxumtnotjxq
-  password: _u66lrFwdWli6eei6-y8Lg_Mel
+  username: dnvtkayjqbvxkj
+  password: cUS72o9wtwoCWro9nui8Vshxw5
   port: 5432
 production:
   adapter: postgresql
   encoding: unicode
-  database: d5f8ei0984rarg
-  hostname: ec2-54-197-241-78.compute-1.amazonaws.com
+  database: ddu8b7bhkk835m
+  hostname: ec2-54-197-241-64.compute-1.amazonaws.com
   pool: 5
-  username: txrsxumtnotjxq
-  password: _u66lrFwdWli6eei6-y8Lg_Mel
+  username: dnvtkayjqbvxkj
+  password: cUS72o9wtwoCWro9nui8Vshxw5
   port: 5432
