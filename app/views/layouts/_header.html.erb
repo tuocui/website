@@ -1,13 +1,13 @@
-<nav class="navbar navbar-inverse navbar-fixed-top" role="navigation">
-	<div class="navbar-inner">
-		<div id="name-container" class="col-md-2">
-			<a class="name" href="/">Tony</a>
-		</div>
-		<div id="main-nav" class="col-md-10">
-			<span id="nav-title">
-				<i class="fa fa-<%= @header_icon %>"></i>
-				<%= @header_text %>
-			</span>
-		</div>
-	</div>
+<nav class="navbar navbar-inverse navbar-fixed-top navbar-default" role="navigation">
+	<ul class="options">
+		<li class="option welcome <%= @welcome_active %>">
+			<a href="/"><i class="fa fa-plane"></i>Tony</a>
+		</li>
+		<li class="option thoughts <%= @thoughts_active %>">
+			<a href="/thoughts"><i class="fa fa-comment"></i>Thoughts</a>
+		</li>
+		<li class="option contact <%= @contact_active %>">
+			<a href="/contact"><i class="fa fa-phone"></i>Contact</a>
+		</li>
+	</ul>
 </nav>

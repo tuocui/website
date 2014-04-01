@@ -7,27 +7,20 @@
 	.options {
 		list-style: none;
 		min-height: 100%;
-		background: #70b6ff;
+		background: #f3f3f3;
 		padding: 0;
 		.option {
 			height: 65px;
 			text-transform: uppercase;
-			border-top: 1px solid #7bbeff;
-			border-bottom: 1px solid #489bf4;
-			&:hover {
-				border-top: 1px solid #489bf4;
-			}
 			a {
-				color: #fff;
+				color: #cbcbcb;
 				height: 100%;
 				width: 100%;
 				padding: 22px 0 0 15%;
 				&:hover {
-					color: #fff;
-					background: #4e9ff7;
+					color: #909090;
 				}
 				i {
-					color: #0876e1;
 					margin-right: 6%;
 				}
 				.fa-comment {
@@ -35,9 +28,8 @@
 				}
 			}
 			&.active {
-				border-top: 1px solid #4e9ff7;
 				a {
-					background: #4e9ff7;
+					color: #909090;
 				}
 			}
 		}
