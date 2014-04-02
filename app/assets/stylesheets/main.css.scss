@@ -1,6 +1,7 @@
 body {
 	font-family: Permiansanstypefaceregular, sans-serif;
   height: 100%;
+	background: url("/assets/background.png") repeat #f7f7f7;
 }
 
 a {
@@ -12,19 +13,20 @@ a {
 }
 
 #main-container {
-	padding-top: 65px;
+	padding-top: 150px;
 	min-height: 100%;
-	background: #f3f3f3;
 	#content-container {
 		left: 16.666666666666%;
 	}
 	.inner-container {
 		padding: 50px 16%;
-		color: #2e537b;
+		color: #5d5d5d;
+		width: 900px;
+		margin: 0 auto;
+		text-align: center;
 		.inner-header{
 			text-transform: uppercase;
 			padding-bottom: 35px;
-			border-bottom: 1px dotted #B5C5CE;
 		}
 	}
 }
