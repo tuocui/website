@@ -8,15 +8,15 @@
 @import "header";
 @import "main";
 @import "sidebar";
+@import "index";
 
 @font-face {
-    font-family: 'Permiansanstypefaceregular';
-    src: font-url('permiansanstypeface-webfont.eot');
-    src: font-url('permiansanstypeface-webfont.eot?#iefix') format('embedded-opentype'),
-         font-url('permiansanstypeface-webfont.woff') format('woff'),
-         font-url('permiansanstypeface-webfont.ttf') format('truetype'),
-         font-url('permiansanstypeface-webfont.svg#permiansanstypefaceregular') format('svg');
-    font-weight: normal;
-    font-style: normal;
-
+  font-family: 'Permiansanstypefaceregular';
+  src: font-url('permiansanstypeface-webfont.eot');
+  src: font-url('permiansanstypeface-webfont.eot?#iefix') format('embedded-opentype'),
+       font-url('permiansanstypeface-webfont.woff') format('woff'),
+       font-url('permiansanstypeface-webfont.ttf') format('truetype'),
+       font-url('permiansanstypeface-webfont.svg#permiansanstypefaceregular') format('svg');
+  font-weight: normal;
+  font-style: normal;
 }
