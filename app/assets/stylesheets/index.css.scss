@@ -1,5 +1,20 @@
 #index {
+  a {
+    display: inline;
+  }
+  p {
+    margin: 0 0 15px;
+  }
   #blurb {
-    font-size: 20px;
+    font-size: 15px;
+    ul {
+      text-align: left;
+    }
+  }
+  #photo {
+    .photo-me {
+      height: 400px;
+      @include border-radius(3px);
+    }
   }
 }
