@@ -1,8 +1,7 @@
 Website::Application.routes.draw do
 
   root :to => "blog#index"
-
-
+  
   controller :blog do
     get '/thoughts' => :thoughts
     get '/thoughts/:id' => :thought

@@ -1,2 +1,1 @@
-New website. Will start work on it when I have time.
-=======
+Personal website where I vomit my thoughts on the internet.
