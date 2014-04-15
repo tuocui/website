@@ -7,6 +7,7 @@ Website::Application.routes.draw do
     get '/thoughts' => :thoughts
     get '/thoughts/:id' => :thought
     get '/contact' => :contact
+    get '/resume' => :resume
   end
   # The priority is based upon order of creation:
   # first created -> highest priority.

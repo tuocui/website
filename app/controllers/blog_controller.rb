@@ -19,9 +19,13 @@ class BlogController < ApplicationController
     #@comments = @post.comments
   end
 
-
   def contact
   	set_active("contact")
   	render 'contact'
+  end
+
+  def resume
+    set_active("welcome")
+    render 'resume', :layout => "no_header"
   end
 end

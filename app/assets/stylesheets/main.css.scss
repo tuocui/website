@@ -12,6 +12,10 @@ a {
 	}
 }
 
+h5 {
+	font-size: 25px;
+}
+
 #main-container {
 	#content-container {
 		left: 16.666666666666%;
@@ -20,13 +24,13 @@ a {
 		color: #5d5d5d;
 		width: 986px;
 		margin: 0 auto;
-		padding: 30px 0 0 0;
-		text-align: center;
+		padding: 30px 0;
 		.inner-header{
 			text-transform: uppercase;
 			line-height: 50px;
 			font-size: 30px;
 			letter-spacing: -1px;
+			text-align: center;
 		}
 		.content-container {
 			padding: 35px;
@@ -34,6 +38,7 @@ a {
 			background: #f7f7f7;
 			width: 100%;
 			display: table;
+			text-align: center;
 			@include box-shadow(0 0 10px -3px #c3c3c3);
 			@include border-radius(2px);
 		}
