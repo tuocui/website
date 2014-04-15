@@ -14,7 +14,6 @@ class BlogController < ApplicationController
   def thought
     id = params[:id].to_i
     @post = Post.find_by_id(id)
-    puts @post
     render 'thoughts'
     #@comments = @post.comments
   end
