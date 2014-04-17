@@ -6,9 +6,10 @@ body {
 
 a {
 	text-decoration: none;
-	display: block;
+	color: #b0b0b0;
 	&:hover {
 		text-decoration: none !important;
+		color: #5d5d5d;
 	}
 }
 
@@ -47,4 +48,8 @@ h5 {
 
 html { 
     height:100%;
+}
+
+#error-404-container {
+	text-align: center;
 }
