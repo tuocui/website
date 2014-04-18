@@ -3,7 +3,17 @@
     <div class="inner-container" id="thoughts-container">
       <h4 class="inner-header">Thoughts</h4>
       <div class="post">
-        <p>Hmm, I guess I'm not thinking about much yet. Maybe you should bug me to put something here.</p>
+        <% if @posts.empty? %>
+          <p>Hmm, I guess I'm not thinking about much yet. Maybe you should bug me to put something here.</p>
+        <% else %>
+          <% for post in @posts %>
+            <h6><%= post.title %></h6>
+            <p class="post-date"><%= post.created_at.strftime("%b %d, %Y") %></p>
+            <section class="post-body">
+              <%= raw post.content %>
+            </section>
+          <% end %>
+        <% end %>
       </div>
     </div>
   </div>

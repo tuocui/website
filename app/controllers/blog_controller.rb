@@ -7,6 +7,8 @@ class BlogController < ApplicationController
   end
 
   def thoughts
+    @posts = Post.order("created_at DESC")[0..3]
+    @all_posts = Post.all
   	set_active("thoughts")
   	render 'thoughts'
   end
