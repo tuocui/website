@@ -7,7 +7,7 @@ class BlogController < ApplicationController
   end
 
   def thoughts
-    @posts = Post.order("created_at DESC")[0..3]
+    @post = Post.order("created_at DESC").first
     @all_posts = Post.all
   	set_active("thoughts")
   	render 'thoughts'
@@ -17,7 +17,6 @@ class BlogController < ApplicationController
     id = params[:id].to_i
     @post = Post.find_by_id(id)
     render 'thoughts'
-    #@comments = @post.comments
   end
 
   def contact
