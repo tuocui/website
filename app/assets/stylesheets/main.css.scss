@@ -6,7 +6,7 @@ body {
 
 a {
 	text-decoration: none;
-	color: #b0b0b0;
+	color: #a0a0a0;
 	&:hover {
 		text-decoration: none !important;
 		color: #5d5d5d;
@@ -48,6 +48,16 @@ h5 {
 
 html { 
     height:100%;
+}
+
+.horizontal-rule {
+	border-bottom: 1px dotted #c3c3c3;
+	width: 450px;
+	margin: auto;
+}
+
+ul {
+	list-style: square;
 }
 
 #error-404-container {

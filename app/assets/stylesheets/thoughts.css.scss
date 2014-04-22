@@ -3,17 +3,48 @@
     text-align: justify;
     font-size: 17px;
     .post {
-      margin-top: 40px;
-      h6 {
+      margin: 35px 0;
+      h1 {
         font-size: 23px;
+      }
+      h2 {
+        font-size: 18px;
       }
       .post-date {
         font-size: 13px;
-        color: #b0b0b0;
+        color: #C4C4C4;
       }
       .post-body {
         margin-top: 25px;
         font-size: 15px;
+        code {
+          padding: 15px 25px;
+          margin: 15px auto;
+          width: 100%;
+          display: block;
+          background-color: #E0E0E0;
+          color: inherit;
+          font-size: 12px;
+        }
+      }
+    }
+    #archives-container {
+      margin-top: 35px;
+      .archive-header {
+        font-size: 18px;
+        text-align: center;
+      }
+      .archives {
+        padding-left: 20px;
+        a {
+          font-size: 14px;
+        }
+        .archive-date {
+          font-size: 14px;
+        }
+        a, .archive-date {
+          vertical-align: top;
+        }
       }
     }
   }

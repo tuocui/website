@@ -6,12 +6,24 @@
         <% if @post.nil? %>
           <p>Hmm, I guess I'm not thinking about much yet. Maybe you should bug me to put something here.</p>
         <% else %>
-          <h6><%= @post.title %></h6>
+          <h1><%= @post.title %></h1>
           <p class="post-date"><%= @post.created_at.strftime("%b %d, %Y") %></p>
           <section class="post-body">
             <%= raw @post.content %>
           </section>
         <% end %>
+      </div>
+      <div class="horizontal-rule"></div>
+      <div id="archives-container">
+        <h3 class="archive-header">Archives</h3>
+        <ul class="archives">
+          <% for post in @all_posts %>
+            <% if @post and post.id == @post.id %>
+              <% next %>
+            <% end %>
+            <li><a href="thoughts/<%= post.id %>"><%= post.title %></a> - <span class="archive-date"><%= post.created_at.strftime("%b %d, %Y") %></li>
+          <% end %>
+        </ul>
       </div>
     </div>
   </div>
