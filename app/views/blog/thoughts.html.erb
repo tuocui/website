@@ -21,7 +21,7 @@
             <% if @post and post.id == @post.id %>
               <% next %>
             <% end %>
-            <li><a href="thoughts/<%= post.id %>"><%= post.title %></a> - <span class="archive-date"><%= post.created_at.strftime("%b %d, %Y") %></li>
+            <li><a href="/thoughts/<%= post.id %>"><%= post.title %></a> - <span class="archive-date"><%= post.created_at.strftime("%b %d, %Y") %></li>
           <% end %>
         </ul>
       </div>
