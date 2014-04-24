@@ -1,0 +1,57 @@
+Jamming some code - pt. 2
+
+
+<p>Part deux (oh man, my high school French is really paying off) of my posts about <a href="http://code.google.com/codejam/">Google Codejam</a>. You can find my previews post about Magic <a href="/thoughts/2">here</a>. As always, you can see my full solutions on <a href="https://github.com/tuocui/codejam">Github</a>. Alright, that's enough boilerplate, let's get to the nitty gritty.</p>
+
+<h2>Cookie Clicker Alpha</h2>
+<p><a href="http://code.google.com/codejam/contest/2974486/dashboard#s=p1">Problem</a></p>
+<p>The second question for the qualification round. As such, it requires a bit more thinking than the magic problem (which was quite simple).</p>
+
+<p>For those who aren't familiar with the (in)famous Cookie Clicker, it is a never-ending game where you are acquiring cookies at an ever increasing rate with the help of your own clicks, cookie farms, factories, and grandmas. You can check it out <a href="http://orteil.dashnet.org/cookieclicker/">here</a>, but be warned, it just might run forever on your machine.</p>
+
+<p>The problem is essentially an optimization problem under the premise of a very simplied Cookie Clicker. You are given three numbers, C, F, and X. The purpose is the reach X cookies as fast as possible using a base of 2.0 cookies per second. C represents the number of cookies to purchase a cookie farm. A cookie farm yields an additional F cookies per second.</p>
+<p>Ex: C = 30.0, F = 1.0, X = 2.0 will have a result of 1 second (since you already start by having 2 cookies/second, and only need to go up to 2 cookies)</p>
+
+<p>Note: You gain cookies continuously, meaning after π seconds after the game starts, you will have 2π cookies.</p>
+
+<p>The main issue with this problem is that you need to figure out at what point will purchasing a factory actually decrease the time it takes to reach X. As seen with the very simple example, it's best to actually not purchase any factories.
+
+TODO, finish this
+
+</p>The first question for the qualification round, and it's fairly straightforward. Essentially, you are given two 4x4 matrices with numbers from 1-16 randomly organized, each with an associated row number. The question asks for the common number between the two rows given.</p>
+<code>
+  Row number: 2<br>
+  Matrix: <br>
+  1 2 3 4<br>
+  5 6 7 8<br>
+  9 10 11 12<br>
+  13 14 15 16<br><br>
+  Row number: 3<br>
+  Matrix: <br>
+  1 2 5 4<br>
+  3 11 6 15<br>
+  9 10 7 12<br>
+  13 14 8 16<br>
+</code>
+
+<p>The above example should yield 7, as that's the only common number between the two rows. Obviously, there can be intersections<sup>hint</sup> that can have more than one common number, and no common number, and appropriate outputs will be given for those two cases.</p>
+
+<p>The solution is actually quite simple. Read in the two rows as sets of integers, and find the set intersection between the two.</p>
+<code>
+  ans1 = f_read.readline.to_i - 1<br>
+  rows = []<br>
+  for i in 0..3<br>
+    &nbsprows[i] = f_read.readline.split(" ").map{|v| v.to_i}<br>
+  end<br>
+  row1 = rows[ans1]<br>
+  ans2 = f_read.readline.to_i - 1<br>
+  for i in 0..3<br>
+    &nbsprows[i] = f_read.readline.split(" ").map{|v| v.to_i}<br>
+  end<br>
+  row2 = rows[ans2]<br>
+  int_rows = row1 & row2<br>
+</code>
+<p>If the intersection's length is one, then that's the common number. Simple right?</p>
+<p>Note: I actually didn't need to read in the entire matrices and store them. I could have simply just stored the relevant row.</p>
+<p>Next up: Cookie Clicker</p>
+

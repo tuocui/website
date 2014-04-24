@@ -1,0 +1,46 @@
+Jamming some code - pt. 1
+
+
+<p>Recently, I found out about the <a href="http://code.google.com/codejam/">Google Codejam</a>. It's a programming challenge hosted by Google where you solve programming problems through various rounds, and ultimately, there's a few prizes at the end. I figure it'll be a fun thing to do in my off-time so I tried to tackle the qualification round (unfortunately, I was a bit too late to actually enter the qualification round, but still did the problems anyway).</p>
+<p><a href="https://github.com/tuocui/codejam">Here</a> are just the solutions I came up with for this (all in Ruby).</p>
+
+<h2>Magic Trick</h2>
+<p><a href="http://code.google.com/codejam/contest/2974486/dashboard#s=p0">Problem</a></p>
+
+</p>The first question for the qualification round, and it's fairly straightforward. Essentially, you are given two 4x4 matrices with numbers from 1-16 randomly organized, each with an associated row number. The question asks for the common number between the two rows given.</p>
+<code>
+  Row number: 2<br>
+  Matrix: <br>
+  1 2 3 4<br>
+  5 6 7 8<br>
+  9 10 11 12<br>
+  13 14 15 16<br><br>
+  Row number: 3<br>
+  Matrix: <br>
+  1 2 5 4<br>
+  3 11 6 15<br>
+  9 10 7 12<br>
+  13 14 8 16<br>
+</code>
+
+<p>The above example should yield 7, as that's the only common number between the two rows. Obviously, there can be intersections<sup>hint</sup> that can have more than one common number, and no common number, and appropriate outputs will be given for those two cases.</p>
+
+<p>The solution is actually quite simple. Read in the two rows as sets of integers, and find the set intersection between the two.</p>
+<code>
+  ans1 = f_read.readline.to_i - 1<br>
+  rows = []<br>
+  for i in 0..3<br>
+    &nbsprows[i] = f_read.readline.split(" ").map{|v| v.to_i}<br>
+  end<br>
+  row1 = rows[ans1]<br>
+  ans2 = f_read.readline.to_i - 1<br>
+  for i in 0..3<br>
+    &nbsprows[i] = f_read.readline.split(" ").map{|v| v.to_i}<br>
+  end<br>
+  row2 = rows[ans2]<br>
+  int_rows = row1 & row2<br>
+</code>
+<p>If the intersection's length is one, then that's the common number. Simple right?</p>
+<p>Note: I actually didn't need to read in the entire matrices and store them. I could have simply just stored the relevant row.</p>
+<p>Next up: Cookie Clicker</p>
+
