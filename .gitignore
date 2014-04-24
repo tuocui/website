@@ -19,3 +19,4 @@ pickle-email-*.html
 .project
 config/initializers/secret_dev_token.rb
 config/database.yml
+config/initializers/a_devise_secret_dev_token.rb
