@@ -1,7 +1,7 @@
 Jamming some code - pt. 2
 
 
-<p>Part deux (oh man, my high school French is really paying off) of my posts about <a href="http://code.google.com/codejam/">Google Codejam</a>. You can find my previews post about Magic <a href="/thoughts/2">here</a>. As always, you can see my full solutions on <a href="https://github.com/tuocui/codejam">Github</a>. Alright, that's enough boilerplate, let's get to the nitty gritty.</p>
+<p>Part deux (oh man, my high school French is really paying off) of my posts about <a href="http://code.google.com/codejam/">Google Codejam</a>. You can find my previous post about Magic <a href="/thoughts/2">here</a>. As always, you can see my full solutions on <a href="https://github.com/tuocui/codejam">Github</a>. Alright, that's enough boilerplate, let's get to the nitty gritty.</p>
 
 <h2>Cookie Clicker Alpha</h2>
 <p><a href="http://code.google.com/codejam/contest/2974486/dashboard#s=p1">Problem</a></p>

@@ -1,0 +1,50 @@
+Jamming some code - pt. 3
+
+
+<p>Woah, it's been a while. I guess that's what moving around a lot does, especially if it's pretty much across the continent twice over. Well, here's part three of my solutions to the <a href="http://code.google.com/codejam/">Google Codejam</a> qualifier questions. Since I was on a plane when Round 1 (both sub-round A and sub-round B) was occuring, I was naturally unable to participate. I might go back retroactively and do the problems, but for now, I might just stop after the qualificiations. I'm not sure I can even access Round 1's questions anyway. As always, you can see my full solutions on <a href="https://github.com/tuocui/codejam">Github</a>.</p>
+
+<h2>Minesweeper Master</h2>
+<p><a href="https://code.google.com/codejam/contest/2974486/dashboard#s=p2">Problem</a></p>
+<p>This Minesweeper problem is probably the hardest problem in the qualification set, and I might not be able to explain it adequately enough. Take a look at my code any time you're confused.</p>
+
+<p>I'm sure we're all familiar with Minesweeper, so I'm not going to go over the rules. It's definitely a game that I've spent waaaayyyy too much time on when I'm supposed to be paying attention in class (woops). The jist of the this question is that we have an r x c Minesweeper grid, and need to place m mines. The question asks us whether or not we can place these m mines on the grid such that there exists a "safe" square, c, such that when c is clicked on the first move, we automatically win the game of Minesweeper. In addition, if we CAN have a valid configuration, provide one. For example, suppose we have r = 4, c = 4, m = 4. Then we can have:</p>
+
+<code>
+  ****<br>
+  ....<br>
+  ....<br>
+  ...c<br>
+</code>
+
+<p>The above configuration will result in an automatic win when clicking on c (the top-left corner) as the rest of the empty spaces will be automatically (and recursively - HINT) filled.</p>
+
+<p>Alright, so how do we solve this? As hinted before, we're just going to take a recursive approach, filling in the rows/columns one at a time from top-left to bottom right. This way, we're almost always dealing with a rectangle of unfilled spots on every iteration.</p>
+
+<p>First, there's the case where the number of mines is one less than the number of spaces. This is a very simply case. Place the bombs anywhere, place c where you don't have a bomb. BOOM, easy.</p>
+
+<p>If that's not the case, then we have some work ahead of us. I make a call to a recursive function that will actually fill in the bombs for me, and returns the number of bombs needed to be placed.</p>
+
+<p>This recursive function will fill in the bombs from top-left to bottom-right by either rows or columns, whichever will require less bombs to fill that specific line. It will not, however, fill columns/rows in which there are only two empty column/rows remaining, or if the number of mines is less than the number of empty spaces in that column or row. We also keep track of which column/row we are on, using c_index and r_index.</p>
+
+<p>For example, in the above scenario, we started at the top-left corner, saw that we needed to fill in four bombs, and that the number of bombs to fill a row and the number of bombs to fill a column is equal, and m >= r, so we just filled a row.</p>
+
+<p>Because we need to fill either a column or a row, we require two very similar checks. If we determine that one of the two conditions holds (either fill a column or row), then we recurse again, while decreasing the number of mines and increasing c_index or r_index, depending on the action taken. Thus, each iteration contains a full rectangle of unfilled spaces.</p>
+
+<p>If neither of these two conditions hold, then we are either nearing the end and just need to fill the remaining mines, or have encountered a situation where it is impossible to place them for a one-click win. Note how we are forced to stop on a two by two grid (since the two conditions above checks whether or not r - r_index > 2). If there is still a mine needing to be placed on a remaining 2x2 grid, then it is automatically impossible - placing one or two will result in a non-automatic win, and placing three mines will have only one empty space left for the click, which is exactly the very first condition we check where m is one less than the number of spaces.</p>
+
+<p>If there are still mines to be placed, then we place them along the top-left most column/row making sure to leave at least two spaces before the end of the board. If we do not leave these two spaces, and leave only one space, then it is impossible for a one-click win (think about it for a bit). For example: </p>
+<code>
+  ****<br>
+  **..<br>
+  *...<br>
+  *..c<br>
+</code>
+
+<p>Note that the number of bombs left to place at this step is always less than a remaining row or column, OR, there are a total of less than two rows/columns left. Either way, we return the number of mines left to place at the end of this step, and thus, return the number of mines left after the function call.</p>
+
+<p>If the returned value is > 0, then we still have mines to place, but nowhere to place them, so the task is impossible. If it is 0, then not only have we shown that we CAN place the mines, but we have also provided an actual grid of a possible placement. My full code is a bit long to place here. You can always go check it out if you are curious.</p>
+
+<p>Phew, that took some thinking. It took me a while to realize that the edge cases that I was stuck on weren't cases that would ever come up, since they would be taken care of in the recursion. I would also like to apologize if this write-up was a tad confusing. It is really hard to explain this solution without a diagram and me scribbling all over the place. It makes sense in my head.</p>
+
+<p>Next up: Deceitful War</p>
+
