@@ -29,4 +29,9 @@ class BlogController < ApplicationController
     set_active("welcome")
     render 'resume', :layout => "no_header"
   end
+
+  def analytics
+    set_active("analytics")
+    render 'analytics'
+  end
 end

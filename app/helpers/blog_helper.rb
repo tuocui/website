@@ -8,16 +8,16 @@ module BlogHelper
 		case page
 			when "welcome"
 				@welcome_active = "active"
-				@header_icon = "plane"
 				@title = "Tony Cui"
 			when "thoughts"
 				@thoughts_active = "active"
-				@header_icon = "comment"
 				@title = "Thoughts - Tony Cui"
 			when "contact"
 				@contact_active = "active"
-				@header_icon = "phone"
 				@title = "Contact - Tony Cui"
+      when "analytics"
+        @analytics_active = "active"
+        @title = "Analytics"
 		end
 		@header_text = page
 	end
