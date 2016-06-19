@@ -40,4 +40,4 @@ gem 'rails_12factor', group: :production
 # To use debugger
 # gem 'debugger'
 
-ruby '2.1.0'
+ruby '2.1.9'
