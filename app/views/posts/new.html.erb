@@ -1,0 +1,26 @@
+<section id="posts">
+  <div class="row">
+    <div class="inner-container" id="new-post-container">
+      <h4 class="inner-header">New Post</h4>
+      <%= tinymce_assets %>
+      <%= form_for @post, html: {class: "post"} do |f| %>
+        <% if @post.errors.any? %>
+          <div class="error_messages">
+            <h2>Form is invalid</h2>
+            <ul>
+              <% for message in @post.errors.full_messages %>
+                <li><%= message %></li>
+              <% end %>
+            </ul>
+          </div>
+        <% end %>
+        <h3>Title</h3>
+        <%= f.text_field :title, :class => "title", :cols => 120 %>
+        <h3>Content</h3>
+        <%= f.text_area :content, :class => "tinymce", :rows => 20, :cols => 120 %>
+        <%= tinymce %>
+        <p class="button"><%= f.submit %></p>
+      <% end %>
+    </div>
+  </div>
+</section>

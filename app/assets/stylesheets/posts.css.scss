@@ -1,0 +1,19 @@
+#posts {
+  #new-post-container {
+    .inner-header {
+      margin-bottom: 50px;
+    }
+    .post {
+      margin: 35px 0;
+      h1 {
+        font-size: 23px;
+      }
+      h2 {
+        font-size: 18px;
+      }
+      .title {
+        width: 100%;
+      }
+    }
+  }
+}

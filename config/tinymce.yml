@@ -1,0 +1,6 @@
+toolbar:
+  - styleselect | bold italic underline strikeout | undo redo | table
+  - image | link
+plugins:
+  - image
+  - link

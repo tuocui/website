@@ -43,4 +43,5 @@ gem "bcrypt"
 
 gem "protected_attributes"
 
+gem "tinymce-rails"
 ruby '2.1.9'

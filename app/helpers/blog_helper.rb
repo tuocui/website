@@ -5,6 +5,7 @@ module BlogHelper
 		@about_active = ""
 		@thoughts_active = ""
 		@contact_active = ""
+    @new_post_active = ""
 		case page
 			when "welcome"
 				@welcome_active = "active"
@@ -18,6 +19,9 @@ module BlogHelper
       when "analytics"
         @analytics_active = "active"
         @title = "Analytics"
+      when "new_post"
+        @new_post_active = "active"
+        @title = "New Post"
 		end
 		@header_text = page
 	end

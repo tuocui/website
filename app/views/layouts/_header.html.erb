@@ -9,6 +9,11 @@
 		<li class="option contact <%= @contact_active %>">
 			<a href="/contact"><i class="fa fa-phone"></i>Contact</a>
 		</li>
+    <% if !@current_user.nil? && @current_user.user_type == 1 %>
+    <li class="option newpost <%= @new_post_active %>">
+  		<a href="/posts/new"><i class="fa fa-keyboard-o"></i>New Post</a>
+  	</li>
+    <% end %>
 	</ul>
 </nav>
 <div class="horizontal-rule"></div>
