@@ -69,5 +69,5 @@ Website::Application.configure do
   config.eager_load = true
 
   # Set SSL
-  config.force_ssl = true
+  config.force_ssl = false
 end

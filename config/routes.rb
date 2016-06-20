@@ -13,10 +13,10 @@ Website::Application.routes.draw do
   resources :users, only: [:new, :create]
 
   controller :sessions do
-    get '/login' => :new
-    get '/logout' => :destroy
+    get '/login' => :new, :constraints => { :protocol => "https", :subdomain => "secure" }
+    get '/logout' => :destroy, :constraints => { :protocol => "https", :subdomain => "secure" }
   end
-  resources :sessions, only: [:create]
+  resources :sessions, only: [:create], :constraints => { :protocol => "https", :subdomain => "secure" }
 
   get "*path", :to => "pages#error_404"
 end
