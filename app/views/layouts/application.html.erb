@@ -11,6 +11,9 @@
 
 <%= render "layouts/header" %>
 <div id="main-container">
+  <% if !@current_user.nil? %>
+    <p><%= @current_user.first_name %></p>
+  <% end %>
 	<%= yield %>
 </div>
 <%= render "layouts/footer" %>

@@ -39,5 +39,8 @@ gem 'rails_12factor', group: :production
 
 # To use debugger
 # gem 'debugger'
+gem "bcrypt"
+
+gem "protected_attributes"
 
 ruby '2.1.9'
