@@ -10,7 +10,10 @@ Website::Application.routes.draw do
     get '/analytics' => :analytics
   end
 
-  resources :users, only: [:new, :create]
+  controller :users do
+    get '/signup' => :new
+  end
+  resources :users, only: [:create]
 
   controller :sessions do
     get '/login' => :new

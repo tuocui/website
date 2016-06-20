@@ -13,4 +13,8 @@ class ApplicationController < ActionController::Base
       session[:user_id] = nil
     end
   end
+
+  def ssl_configured?
+    !Rails.env.development?
+  end
 end
