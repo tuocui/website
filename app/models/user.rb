@@ -14,6 +14,9 @@ class User < ActiveRecord::Base
   validates_presence_of :password, :on => :create
   validates_presence_of :username
   validates_uniqueness_of :username
+  validates_length_of :username,
+    minimum: 3,
+    too_short: 'Usernames have to be at least 3 characters'
 
   def self.authenticate(username, password)
     user = find_by_username(username)
