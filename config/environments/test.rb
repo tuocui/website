@@ -40,6 +40,4 @@ Website::Application.configure do
   # preloads Rails for running tests, you may have to set it to true.
   config.eager_load = false
 
-  config.force_ssl = false
-
 end

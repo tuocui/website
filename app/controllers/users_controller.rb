@@ -1,4 +1,5 @@
 class UsersController < ApplicationController
+  force_ssl :only => [:new, :create]
   def new
     @user = User.new
   end

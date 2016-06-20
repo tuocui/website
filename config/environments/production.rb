@@ -67,7 +67,4 @@ Website::Application.configure do
 
   # Rake tasks automatically ignore this option for performance.
   config.eager_load = true
-
-  # Set SSL
-  config.force_ssl = false
 end

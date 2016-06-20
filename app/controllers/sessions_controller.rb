@@ -1,5 +1,7 @@
 class SessionsController < ApplicationController
 
+  force_ssl :only => [:new, :create]
+
   def create
     user = User.authenticate(params[:username], params[:password])
     if user
