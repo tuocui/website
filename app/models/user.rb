@@ -1,7 +1,7 @@
 class User < ActiveRecord::Base
 
   attr_accessible :username, :password, :password_confirmation, :first_name,
-                  :last_name, :user_type
+                  :last_name, :user_type, :last_login_time
 
   attr_accessor :password
   before_save :encrypt_password
@@ -21,8 +21,6 @@ class User < ActiveRecord::Base
   def self.authenticate(username, password)
     user = find_by_username(username)
     if user && user.password_hash == BCrypt::Engine.hash_secret(password, user.password_salt)
-      user.last_login_time = Time.now.to_datetime
-      user.save
       user
     else
       nil

@@ -6,9 +6,10 @@ class SessionsController < ApplicationController
     user = User.authenticate(params[:username], params[:password])
     if user
       session[:user_id] = user.id
+      user.update_attribute(:last_login_time, Time.now.to_datetime)
       redirect_to root_url
     else
-      render "new"
+      redirect_to "/login"
     end
   end
 
