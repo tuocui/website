@@ -6,6 +6,9 @@
         <% if @post.nil? %>
           <p>Hmm, I guess I'm not thinking about much yet. Maybe you should bug me to put something here.</p>
         <% else %>
+          <% if @current_user && @current_user.user_type = 1 %>
+          <%= button_to "Delete", "/posts/#{@post.id}", method: :delete, class: "form-button delete-button", data: { confirm: "Are you sure?" }%>
+          <% end %>
           <h1><%= @post.title %></h1>
           <p class="post-date"><%= @post.created_at.strftime("%b %d, %Y") %></p>
           <section class="post-body">

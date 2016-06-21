@@ -21,7 +21,7 @@ Website::Application.routes.draw do
   end
   resources :sessions, only: [:create]
 
-  resources :posts, only: [:new, :create]
+  resources :posts, only: [:new, :create, :destroy]
 
   get "*path", :to => "pages#error_404"
 end

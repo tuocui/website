@@ -19,4 +19,9 @@ class PostsController < ApplicationController
     end
   end
 
+  def destroy
+    Post.destroy(params[:id])
+    redirect_to "/thoughts"
+  end
+
 end
